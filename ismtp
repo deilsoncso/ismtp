@@ -1,0 +1,17 @@
+#!/bin/bash
+##############################
+####   Deilson Oliveira  #####
+####                     #####
+##############################
+
+
+#Obter o IP de saída do SMTP
+ismtp=`echo "helo teste" | nc -C mail.port25.com 25 | grep 250 | cut -d':' -f1 | cut -d' ' -f7`;
+
+echo
+echo "O IP de Saída é: $ismtp ";
+echo
+unset ismtp
+
+#Credits by Samuel Santos
+
