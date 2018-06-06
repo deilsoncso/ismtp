@@ -5,6 +5,12 @@
 ##############################
 
 
+#    A small utility to get the IP output from an SMTP server, to make the service more practical.
+#    How to use:
+# 1- Download the tool through the terminal inside the directory /bin/
+# 2- Enjoy.
+# 3- If you have problems running, use 'chmod 755 ismtp' (without quotes).
+
 #Obter o IP de saída do SMTP
 ismtp=`echo "helo teste" | nc -C mail.port25.com 25 | grep 250 | cut -d':' -f1 | cut -d' ' -f7`;
 
